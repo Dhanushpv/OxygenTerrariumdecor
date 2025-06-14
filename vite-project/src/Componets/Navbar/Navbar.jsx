@@ -9,7 +9,7 @@ function Navbar() {
   return (
     <nav className="max-w-7xl mx-auto px-6 py-5 flex items-center justify-between relative">
       {/* Left Branding */}
-      <div className="flex items-center gap-2">
+      <div className="flex items-center gap-2 bg-white rounded-full p-3 shadow-md">
         <img
           src={Oxygenicon}
           alt="Oxygen Icon"
