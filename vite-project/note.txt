@@ -1,0 +1,29 @@
+
+        <div className="container px-4 py-16 mx-auto flex flex-wrap justify-center gap-6">
+          <div className="card relative w-72 h-72 rounded-lg overflow-hidden">
+            <div className="bg absolute inset-0 bg-gray-200"></div>
+            <div className="blob absolute w-24 h-24 bg-blue-400 rounded-full top-8 left-8"></div>
+          </div>
+
+          <div className="card relative w-72 h-72 rounded-lg overflow-hidden">
+            <div className="bg absolute inset-0 bg-gray-200"></div>
+            <div className="blob absolute w-24 h-24 bg-green-400 rounded-full top-8 left-8"></div>
+          </div>
+
+          <div className="card relative w-72 h-72 rounded-lg overflow-hidden">
+            <div className="bg absolute inset-0 bg-gray-200"></div>
+            <div className="blob absolute w-24 h-24 bg-pink-400 rounded-full top-8 left-8"></div>
+          </div>
+
+
+          <div className="card relative w-72 h-72 rounded-lg overflow-hidden">
+            <div className="bg absolute inset-0 bg-gray-200"></div>
+            <div className="blob absolute w-24 h-24 bg-pink-400 rounded-full top-8 left-8"></div>
+          </div>
+
+
+          <div className="card relative w-72 h-72 rounded-lg overflow-hidden">
+            <div className="bg absolute inset-0 bg-gray-200"></div>
+            <div className="blob absolute w-24 h-24 bg-pink-400 rounded-full top-8 left-8"></div>
+          </div>
+        </div>

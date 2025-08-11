@@ -1,32 +1,28 @@
 import React, { useState, useEffect } from "react";
 import Navbar from "../Navbar/Navbar";
-import hpi1 from "../../assets/images/homepageImages/hpi-1.jpg";
-import hpi2 from "../../assets/images/homepageImages/hpi-2.jpg";
-import hpi4 from "../../assets/images/homepageImages/hpi-4.jpg";
 import lnd1 from "../../assets/images/homepageImages/lnd3.jpg";
 import terrariumShowcase from "../../assets/images/homepageImages/terrarium-display2.png";
+import Cards from "../Cards/Cards";
+import cph1 from "../../assets/images/homepageImages/cph1.png";
+import cph2 from '../../assets/images/homepageImages/cph2.png';
+import cph3 from '../../assets/images/homepageImages/cph3.png';
+import cph4 from '../../assets/images/homepageImages/cph4.png';
+import cph5 from '../../assets/images/homepageImages/cph5.png';
+import cph6 from '../../assets/images/homepageImages/cph6.png';
+import cph7 from '../../assets/images/homepageImages/cph7.png';
+import Plant from "./plants";
 
-const images = [
-  { src: hpi1, alt: "Garment showroom exterior" },
-  { src: hpi2, alt: "Textile variety showcase" },
-  { src: hpi4, alt: "Happy customers in store" },
-];
+
 
 export default function Homepage() {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isPaused, setIsPaused] = useState(false);
 
-  useEffect(() => {
-    if (isPaused) return;
-    const interval = setInterval(() => {
-      setCurrentIndex((prev) => (prev + 1) % images.length);
-    }, 5000);
-    return () => clearInterval(interval);
-  }, [isPaused]);
+
 
   return (
     <>
-      <div className="bg-green-200 font-sans">
+      <div className="" >
         {/* Hero Section */}
         <div className="relative w-full h-[36rem] sm:h-[42rem] lg:h-[45rem]">
           <img
@@ -35,7 +31,7 @@ export default function Homepage() {
             className="w-full h-full object-cover"
           />
           <div className="absolute inset-0 bg-gradient-to-b from-black/90 via-black/40 to-transparent z-10" />
-          <div className="absolute top-0 left-0 w-full z-20">
+          <div className="absolute top-0 left-0 w-full z-50">
             <Navbar />
           </div>
           <div className="absolute inset-0 flex flex-col justify-center items-center text-center px-4 z-20">
@@ -132,33 +128,90 @@ export default function Homepage() {
           </p>
         </div>
 
-<div className="container px-4 py-16 mx-auto flex flex-wrap justify-center gap-6">
-  <div className="card relative w-72 h-72 rounded-lg overflow-hidden">
-    <div className="bg absolute inset-0 bg-gray-200"></div>
-    <div className="blob absolute w-24 h-24 bg-blue-400 rounded-full top-8 left-8"></div>
-  </div>
+        <div><Cards /></div>
 
-  <div className="card relative w-72 h-72 rounded-lg overflow-hidden">
-    <div className="bg absolute inset-0 bg-gray-200"></div>
-    <div className="blob absolute w-24 h-24 bg-green-400 rounded-full top-8 left-8"></div>
-  </div>
 
-  <div className="card relative w-72 h-72 rounded-lg overflow-hidden">
-    <div className="bg absolute inset-0 bg-gray-200"></div>
-    <div className="blob absolute w-24 h-24 bg-pink-400 rounded-full top-8 left-8"></div>
-  </div>
+        <div className="py-8 px-4 text-center bg-green-900 text-gray-100 font-serif">
+          <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-medium">
+            "We also offer beautifully customized products to suit your style!"
+          </h2>
 
-  
-  <div className="card relative w-72 h-72 rounded-lg overflow-hidden">
-    <div className="bg absolute inset-0 bg-gray-200"></div>
-    <div className="blob absolute w-24 h-24 bg-pink-400 rounded-full top-8 left-8"></div>
-  </div>
+        </div>
+        <div
+          className="relative overflow-hidden  bg-[#ACFEAC]"
+          data-aos="fade-up"
+          data-aos-delay="200"
+        >
+          <div className="">
+            <div className="relative mx-auto max-w-7xl px-4 sm:static sm:px-6 lg:px-8 sm:pb-32">
+              <div className="sm:max-w-lg z-50 relative">
+                <h1 className="text-xl font-bold tracking-tight text-gray-900 sm:text-4xl pt-20 font-times">
+                  Crafting Unique, Customized Terrariums to Suit Every Space
+                </h1>
+                <p className="mt-6 text-lg leading-relaxed font-times text-gray-600">
+                  We are passionate creators of handcrafted terrariums, specializing in transforming your unique ideas into stunning pieces of living art. Our work blends creativity, nature, and design to craft customized terrariums that elevate any space—be it a home, office, or special event. Each creation is thoughtfully designed with a deep appreciation for detail, harmony, and sustainability.
+                </p>
+                <p className="mt-4 text-lg leading-relaxed text-gray-600 subtext_ex font-times">
+                  From minimalist glass gardens to elaborate themed landscapes, we take pride in offering fully personalized designs that suit your style, mood, and environment. Every terrarium is not just a product—it’s a reflection of nature’s beauty, captured and curated with care. With a strong focus on quality, innovation, and lasting charm, we’re here to help you bring a little green magic indoors.
+                </p>
+              </div>
 
-  
-  <div className="card relative w-72 h-72 rounded-lg overflow-hidden">
-    <div className="bg absolute inset-0 bg-gray-200"></div>
-    <div className="blob absolute w-24 h-24 bg-pink-400 rounded-full top-8 left-8"></div>
-  </div>
+              <div>
+                {/* Decorative image grid */}
+                <div className="lg:block absolute inset-5 lg:mx-auto lg:w-full lg:max-w-7xl flex justify-center items-center z-0 opacity-30 md:opacity-100 lg:opacity-100">
+
+                  <div className="absolute transform sm:left-1/2 sm:top-0 sm:translate-x-8 lg:left-1/2 lg:top-1/2 lg:-translate-y-1/2 lg:translate-x-8">
+                    <div className="flex items-center space-x-6 lg:space-x-8">
+                      <div className="grid shrink-0 grid-cols-1 gap-y-6 lg:gap-y-8">
+                        <div className="h-64 w-44 overflow-hidden rounded-lg">
+                          <img src={cph1} alt="Terrarium 1" className="size-full object-cover" />
+                        </div>
+                        <div className="h-64 w-44 overflow-hidden rounded-lg">
+                          <img src={cph2} alt="Terrarium 2" className="size-full object-cover" />
+                        </div>
+                      </div>
+                      <div className="grid shrink-0 grid-cols-1 gap-y-6 lg:gap-y-8">
+                        <div className="h-64 w-44 overflow-hidden rounded-lg">
+                          <img src={cph7} alt="Terrarium 3" className="size-full object-cover" />
+                        </div>
+                        <div className="h-64 w-44 overflow-hidden rounded-lg">
+                          <img src={cph4} alt="Terrarium 4" className="size-full object-cover" />
+                        </div>
+                        <div className="h-64 w-44 overflow-hidden rounded-lg">
+                          <img src={cph6} alt="Terrarium 5" className="size-full object-cover" />
+                        </div>
+                      </div>
+                      <div className="grid shrink-0 grid-cols-1 gap-y-6 lg:gap-y-8">
+                        <div className="h-64 w-44 overflow-hidden rounded-lg">
+                          <img src={cph3} alt="Terrarium 6" className="size-full object-cover" />
+                        </div>
+                        <div className="h-64 w-44 overflow-hidden rounded-lg">
+                          <img src={cph5} alt="Terrarium 7" className="size-full object-cover" />
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                {/* Button */}
+                <div className="flex items-center mt-10">
+                  <a
+                    // onClick={() => navigate("/About")}
+                    className="inline-block rounded-md border border-transparent bg-green-600 px-8 py-3 text-center font-medium text-white hover:bg-green-700 z-50 relative cursor-pointer"
+                  >
+                    Read More
+                  </a>
+
+
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+<div className="pt-20 py-10 ">
+  <Plant/>
 </div>
 
       </div>
