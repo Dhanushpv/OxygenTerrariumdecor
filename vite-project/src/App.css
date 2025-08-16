@@ -41,3 +41,48 @@ body{
   z-index: calc(10 - abs(var(--pos) - var(--center)));
   opacity: calc(1 - (abs(var(--pos) - var(--center)) * 0.20));
 }
+
+.PlantCard{
+   /* width: 190px;
+  height: 254px; */
+  margin: 10px;
+  /* padding-top: 20px; */
+  border-radius: 30px;
+  background: rgb(128, 255, 134);
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 50px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 26px -18px inset;
+}
+
+/* Mobile: hide images */
+@media (max-width: 768px) {
+  .gallery {
+    display: none;
+  }
+
+  .text-7xl {
+    font-size: 2rem; /* Smaller heading for mobile */
+    text-align: center;
+  }
+
+  .max-w-md {
+    text-align: center;
+  }
+
+  .px-8 {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+}
+
+/* Medium: heading & paragraph on top, images below */
+@media (min-width: 768px) and (max-width: 1024px) {
+  .flex.items-center {
+    flex-direction: column; /* Stack vertically */
+    
+  
+  }
+
+  .max-w-md {
+    text-align: center;
+    margin-bottom: 2rem;
+  }
+}

@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import Navbar from "../Navbar/Navbar";
-import lnd1 from "../../assets/images/homepageImages/lnd3.jpg";
+import lnd1 from "../../assets/images/homepageImages/Homebg.jpg";
 import terrariumShowcase from "../../assets/images/homepageImages/terrarium-display2.png";
 import Cards from "../Cards/Cards";
 import cph1 from "../../assets/images/homepageImages/cph1.png";
@@ -11,7 +11,12 @@ import cph5 from '../../assets/images/homepageImages/cph5.png';
 import cph6 from '../../assets/images/homepageImages/cph6.png';
 import cph7 from '../../assets/images/homepageImages/cph7.png';
 import Plant from "./plants";
-
+import Feature from "./Feature";
+import { PiPlant } from "react-icons/pi";
+import { GrGroup } from "react-icons/gr";
+import { TbPlant2 } from "react-icons/tb";
+import { MdOutlineLocalShipping } from "react-icons/md";
+import Aboutbg from "../../assets/images/homepageImages/Aboutbg.jpg";
 
 
 export default function Homepage() {
@@ -28,22 +33,65 @@ export default function Homepage() {
           <img
             src={lnd1}
             alt="Landing background"
-            className="w-full h-full object-cover"
+            className="w-full h-full object-cover rounded-b-[40px]"
           />
-          <div className="absolute inset-0 bg-gradient-to-b from-black/90 via-black/40 to-transparent z-10" />
+          <div className="absolute inset-0  z-10" />
           <div className="absolute top-0 left-0 w-full z-50">
             <Navbar />
           </div>
-          <div className="absolute inset-0 flex flex-col justify-center items-center text-center px-4 z-20">
+          {/* <div className="absolute inset-0 flex flex-col justify-center items-center text-center px-4 z-20">
             <h1 className="text-3xl sm:text-5xl lg:text-6xl font-bold text-white font-serif drop-shadow-lg">
               Oxygen Terrarium Decor
             </h1>
             <p className="mt-4 text-lg sm:text-xl lg:text-2xl text-white font-light font-serif drop-shadow">
               “Breathe better. Live greener. Decor smarter.”
             </p>
-          </div>
+          </div> */}
         </div>
 
+        {/* Features Section */}
+        <div className="flex flex-wrap justify-center items-center gap-20 p-8 bg-[#ACFEAC]">
+
+          <div className="flex flex-col items-center px-5 ">
+            <div className="text-white bg-[#284727]  p-4 rounded-full   text-6xl"><PiPlant className="  " /></div>
+            <div className="pt-3">Bespoke Support</div>
+          </div>
+
+          <div className="flex flex-col items-center  p">
+            <div className="text-white bg-[#284727]  p-4 rounded-full text-6xl"><GrGroup className="  " /></div>
+            <div className="pt-3">Expert Plant Support </div>
+          </div>
+
+          <div className="flex flex-col items-center ">
+            <div className="text-white bg-[#284727]  p-4 rounded-full  text-6xl mt-4"><TbPlant2 className="  " /></div>
+            <div className="pt-3 flex flex-col items-center"><span>Multiple Plant</span> <span>Species Available</span></div>
+          </div>
+
+
+          <div className="flex flex-col items-center ">
+            <div className="text-white bg-[#284727]  p-4 rounded-full  text-6xl mt-4 "><MdOutlineLocalShipping className="  " /></div>
+            <div className="pt-3 flex flex-col items-center"><span>Eco-Safe </span><span>Delivery & Plant Care</span></div>
+          </div>
+
+
+          {/* <div className="  "><GrGroup className="text-4xl text-white bg-[#284727] p-4 rounded-full" /></div>
+            <div className="" ><TbPlant2 className="text-4xl text-white " /></div>
+            <div className="bg-[#284727] p-8  rounded-full" ><MdOutlineLocalShipping className="text-4xl text-white " /></div> */}
+
+
+
+        </div>
+
+
+        {/* Tagline Section3 */}
+        <div className="py-8 px-4 text-center bg-green-900 text-gray-100 font-serif">
+          <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-medium">
+            "Bringing Nature Indoors — One Terrarium at a Time"
+          </h2>
+          <p className="mt-2 text-sm sm:text-base md:text-lg font-light">
+            Handcrafted Decor | Plant Styling | Ongoing Care
+          </p>
+        </div>
         {/* Intro Section */}
         <section className="overflow-hidden py-14 sm:py-20">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -118,25 +166,34 @@ export default function Homepage() {
           </div>
         </section>
 
-        {/* Tagline Section */}
+        {/* Tagline Section2 */}
         <div className="py-8 px-4 text-center bg-green-900 text-gray-100 font-serif">
           <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-medium">
-            "Bringing Nature Indoors — One Terrarium at a Time"
+            “Explore our most popular shapes, designed to fit every space.”
           </h2>
-          <p className="mt-2 text-sm sm:text-base md:text-lg font-light">
-            Handcrafted Decor | Plant Styling | Ongoing Care
-          </p>
+
         </div>
 
+        {/* Cards Section */}
         <div><Cards /></div>
 
+           {/* Plant Section */}
+        <div className="">
+          <div className="pt-20 py-20   PlantCard">
+            <Plant />
+          </div>
+        </div>
 
+        {/* Tagline Section3 */}
         <div className="py-8 px-4 text-center bg-green-900 text-gray-100 font-serif">
           <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-medium">
             "We also offer beautifully customized products to suit your style!"
           </h2>
 
         </div>
+
+
+        {/* Custom Terrarium Section */}           
         <div
           className="relative overflow-hidden  bg-[#ACFEAC]"
           data-aos="fade-up"
@@ -158,7 +215,7 @@ export default function Homepage() {
 
               <div>
                 {/* Decorative image grid */}
-                <div className="lg:block absolute inset-5 lg:mx-auto lg:w-full lg:max-w-7xl flex justify-center items-center z-0 opacity-30 md:opacity-100 lg:opacity-100">
+                <div className="lg:block absolute inset-5  lg:mx-auto lg:w-full lg:max-w-7xl  flex justify-center items-center z-0 opacity-30 md:opacity-30 lg:opacity-100">
 
                   <div className="absolute transform sm:left-1/2 sm:top-0 sm:translate-x-8 lg:left-1/2 lg:top-1/2 lg:-translate-y-1/2 lg:translate-x-8">
                     <div className="flex items-center space-x-6 lg:space-x-8">
@@ -208,11 +265,47 @@ export default function Homepage() {
             </div>
           </div>
         </div>
+        <div className="py-8 px-4 text-center bg-green-900 text-gray-100 font-serif">
+          <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-medium">
+            "About Us – Why Choose Us?"
+          </h2>
 
+        </div>
 
-<div className="pt-20 py-10 ">
-  <Plant/>
+<div
+  style={{ backgroundImage: `url(${Aboutbg})` }}
+  className="w-full bg-no-repeat bg-center  min-h-[1000px] sm:min-h-screen border-t-4 border-b-4 border-green-900 bg-contain 
+    md:bg-contain
+  "
+>
+  <div className="flex justify-between   ">
+    
+    <h1 className="text-7xl w-[28%] font-bold leading-[110px] flex flex-col items-center  justify-center py-10 tracking-wider">Why We’re Committed to Meeting All Your Terrarium Needs</h1>
+    <div className=" text-right w-[32%]  text-justify p-5">
+                    <p className="pt-5 leading-8 tracking-wider">
+                      We believe terrariums are more than just décor—they’re living art pieces that bring nature indoors. Each terrarium is carefully crafted with balance in mind, creating a miniature ecosystem that thrives with minimal effort. Whether you’re a first-time plant owner or a seasoned green enthusiast, our terrariums are designed to fit seamlessly into your lifestyle.
+                    </p>
+
+                    <p className="pt-5 leading-8 tracking-wider">But we don’t stop at creating beautiful pieces—we’re here to guide you beyond the purchase. From helping you choose the right terrarium for your home or workspace to offering care tips for light, watering, and placement, we make sure your little garden flourishes. We also provide access to rare and custom terrarium designs, packaged with care to reach you in perfect condition.</p>
+
+                    <p className="pt-5 leading-8 tracking-wider">
+
+                      Our support doesn’t end at checkout. Our expert team is available 24/7 to answer your questions, whether it’s about humidity, condensation, or rearranging your plants. With us, you’re not just buying a terrarium—you’re gaining a partner who’s committed to keeping your indoor garden thriving for years to come.
+                    </p>
+    </div>
+
+  </div>
 </div>
+
+
+     
+
+        <div>
+          <Feature />
+        </div>
+
+
+
 
       </div>
     </>

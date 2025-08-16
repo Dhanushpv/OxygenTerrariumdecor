@@ -34,7 +34,7 @@ export default function Plant() {
   };
 
   return (
-<div className="flex items-center justify-center w-full gap-8 px-8">
+<div className="flex items-center justify-center w-full gap-8 px-8 w-full md:max-w-md lg:max-w-full ">
 
   <div className="max-w-md">
     <h1 className="text-7xl font-medium">The Beauty of Every Leaf</h1>
