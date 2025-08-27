@@ -5,11 +5,16 @@ export default {
     "./src/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
-    extend: {},
+    extend: {
+      fontFamily: {
+        arcadian: ['Arcadian', 'serif'],
+      }
+
+    },
      screens: {
       sm: "640px",
       md: "900px", // changed from 768px to 700px
-      lg: "1024px",
+      lg: "1034px",
       xl: "1280px",
       "2xl": "1536px",
     },
