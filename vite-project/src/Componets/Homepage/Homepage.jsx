@@ -21,6 +21,7 @@ import Footer from "../Footer/Footer";
 import Contactus from "./Contactus";
 import AOS from "aos";
 import "aos/dist/aos.css";
+import Buttons from "./Button";
 
 
 export default function Homepage() {
@@ -30,7 +31,7 @@ export default function Homepage() {
   useEffect(() => {
     AOS.init({
       duration: 1000,   // animation duration (ms)
-    
+
     });
   }, []);
 
@@ -38,7 +39,12 @@ export default function Homepage() {
 
   return (
     <>
+      <div className="fixed bottom-4 right-4 z-50">
+        <Buttons />
+      </div>
       <div className="" id="home" data-aos="fade-up">
+
+
         {/* Hero Section */}
         <div className="relative w-full h-[36rem] sm:h-[42rem] lg:h-[45rem]" data-aos="fade-up">
           <img
@@ -208,7 +214,7 @@ export default function Homepage() {
 
 
         {/* Custom Terrarium Section */}
-        <div 
+        <div
           className="relative overflow-hidden  bg-[#ACFEAC]"
           data-aos="fade-up"
           data-aos-delay="200"
